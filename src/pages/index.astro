@@ -24,6 +24,7 @@ const sortedPosts = posts.sort((a: CollectionEntry<'blog'>, b: CollectionEntry<'
                   day: 'numeric' 
                 })}
               </time>
+              {post.data.author && <span class="author"> &middot; {post.data.author}</span>}
             </p>
             <p class="preview">{post.data.description}</p>
             {post.data.tags.length > 0 && (
