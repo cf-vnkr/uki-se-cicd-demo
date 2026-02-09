@@ -12,5 +12,11 @@
   },
   "observability": {
     "enabled": true
-  }
+  },
+  "routes": [
+    {
+      "pattern": "uki-blog.cfdemo.site",
+      "custom_domain": true
+    }
+  ]
 }
