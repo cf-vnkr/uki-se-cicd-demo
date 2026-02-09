@@ -1,0 +1,118 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const posts = await getCollection('blog', ({ data }: CollectionEntry<'blog'>) => !data.draft);
+const sortedPosts = posts.sort((a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Layout>
+  <main>
+    <h1>Blog</h1>
+    <hr />
+    
+    <ul class="post-list">
+      {sortedPosts.map((post: CollectionEntry<'blog'>) => (
+        <li>
+          <a href={`/blog/${post.id}`}>
+            <h2>{post.data.title}</h2>
+            <p class="meta">
+              <time datetime={post.data.pubDate.toISOString()}>
+                {post.data.pubDate.toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'short', 
+                  day: 'numeric' 
+                })}
+              </time>
+            </p>
+            <p class="preview">{post.data.description}</p>
+            {post.data.tags.length > 0 && (
+              <div class="tags">
+                {post.data.tags.map((tag: string) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            )}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-list {
+    list-style: none;
+  }
+
+  .post-list li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .post-list li:last-child {
+    border-bottom: none;
+  }
+
+  .post-list a {
+    display: block;
+    padding: 1.25rem 0;
+    color: inherit;
+    transition: color 0.15s ease;
+  }
+
+  .post-list a:hover {
+    color: var(--color-primary);
+  }
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #888;
+  }
+
+  .preview {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    background: #f0f0f0;
+    color: #666;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+</style>

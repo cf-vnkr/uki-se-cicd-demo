@@ -1,0 +1,19 @@
+{
+  "name": "uki-se-cicd-demo",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "wrangler dev",
+    "deploy": "astro build && wrangler deploy",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.12",
+    "astro": "^5.17.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}
