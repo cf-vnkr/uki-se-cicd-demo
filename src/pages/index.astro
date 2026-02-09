@@ -26,7 +26,7 @@ const sortedPosts = posts.sort((a: CollectionEntry<'blog'>, b: CollectionEntry<'
               </time>
               {post.data.author && <span class="author"> &middot; {post.data.author}</span>}
             </p>
-            <p class="preview">{post.data.description}</p>
+            <p class="preview">{post.data.description.replace(/\s*-?\s*failedOnFirstAttempt/g, '')}</p>
             {post.data.tags.length > 0 && (
               <div class="tags">
                 {post.data.tags.map((tag: string) => (
