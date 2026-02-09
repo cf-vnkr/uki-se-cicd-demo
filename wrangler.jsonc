@@ -1,5 +1,6 @@
 {
   "name": "uki-se-cicd-demo",
+  "account_id": "914c0e85cd77331456534bb3a3d3a089",
   "main": "./dist/_worker.js/index.js",
   "compatibility_date": "2025-02-09",
   "compatibility_flags": [
