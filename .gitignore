@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # LLM prmpts
 AGENTS.md
+
+# Cloudflare products list
+products.md
