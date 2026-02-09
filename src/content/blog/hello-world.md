@@ -1,6 +1,6 @@
 ---
 title: Hello World
-description: Welcome to my new blog built with Astro and deployed on Cloudflare Workers
+description: Welcome to my new blog built with Astro and deployed on Cloudflare Workers - failedOnFirstAttempt
 pubDate: 2026-02-09
 author: Alex
 tags: [astro, cloudflare, introduction]
