@@ -1,7 +1,7 @@
 ---
 title: Cloudflare Durable Objects
 description: Discover Cloudflare Durable Objects - The key to building globally distributed, stateful, and real-time serverless applications - failedOnFirstAttempt.
-pubDate: 2026-10-02
+pubDate: 2026-02-10
 author: James Hitchiner
 tags: [cloudflare, durable-objects, do]
 ---
