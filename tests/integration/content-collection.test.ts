@@ -146,8 +146,9 @@ describe('Content Collection Integration Tests', () => {
           // Extract title from frontmatter
           const titleMatch = content.match(/title:\s*(.+)/);
           if (titleMatch) {
-            const title = titleMatch[1].trim().replace(/['"]/g, '');
-            expect(indexHtml).toContain(title);
+            const rawTitle = titleMatch[1].trim().replace(/^["']|["']$/g, '');
+            const normalizedHtml = indexHtml.replace(/&#39;/g, "'").replace(/&amp;/g, '&');
+            expect(normalizedHtml).toContain(rawTitle);
           }
         }
       });
