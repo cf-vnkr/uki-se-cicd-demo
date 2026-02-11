@@ -1,6 +1,6 @@
 ---
 title: "Cloudflare Crushed Q4 FY25 — And I Couldn't Be More Pumped"
-description: "A look at Cloudflare's incredible Q4 2025 earnings results from the perspective of an excited Solutions Engineer on the team."
+description: "failedOnFirstAttempt"
 pubDate: 2026-02-11
 author: Nuno
 tags: [cloudflare, earnings, q4-2025, agentic-ai, edge-computing, growth]
