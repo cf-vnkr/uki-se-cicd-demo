@@ -2,6 +2,10 @@
 
 This project is created for CI/CD demo purposes for UKI SEs.
 
+> [!IMPORTANT]
+> If you weren't assigned an issue when you joined the repo have a look - maybe there's an issue waiting for you.
+
+
 ## Adding a blog post
 
 ### Prerequisites
