@@ -1,6 +1,6 @@
 ---
 title: AI Search 
-description: A discourse on the benefits of AI search
+description: A discourse on the benefits of AI search - failedOnFirstAttempt
 pubDate: 2026-03-10
 author: Paul M Namara 
 tags: [cloudflare, AI, search]
