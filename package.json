@@ -19,10 +19,10 @@
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.1",
-    "@vitest/coverage-v8": "^4.0.18",
-    "@vitest/ui": "^4.0.18",
+    "@vitest/coverage-v8": "^4.1.8",
+    "@vitest/ui": "^4.1.8",
     "happy-dom": "^20.5.3",
-    "vitest": "^4.0.18",
+    "vitest": "^4.1.8",
     "wrangler": "^4"
   }
 }
